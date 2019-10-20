@@ -1,8 +1,19 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="80" minWidth="80" prefHeight="412.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="24.0" layoutY="56.0" text="Projectfolder:" />
+      <TextField fx:id="txt_projectfolder" layoutX="114.0" layoutY="51.0" />
+      <AnchorPane fx:id="draganddrop" layoutX="24.0" layoutY="132.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver" onMouseClicked="#onMouseClicked" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label layoutX="85.0" layoutY="92.0" text="Drop item here" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btn_convert" layoutX="333.0" layoutY="298.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Convert" />
+   </children>
+</AnchorPane>
