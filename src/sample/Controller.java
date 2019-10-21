@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.fxml.Initializable;
 
@@ -83,6 +84,15 @@ public class Controller implements Initializable{
 
 
     public void onActionProjecrtFolder(ActionEvent actionEvent) {
-        //speichern unter -> auswählbar durch filechooser, falls standar-folder nicht erwünscht
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Save as");
+        selectedFile = directoryChooser.showDialog(draganddrop.getScene().getWindow());
+        if(selectedFile != null){
+            save(selectedFile);
+        }
+    }
+
+    public void save(File file){
+
     }
 }
