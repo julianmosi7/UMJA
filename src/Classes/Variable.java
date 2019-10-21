@@ -1,6 +1,6 @@
 package Classes;
 
-public class Variable {
+public class Variable extends Attributes {
     String datatype;
     String name;
     String value;

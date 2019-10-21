@@ -2,7 +2,7 @@ package Classes;
 
 import java.util.Arrays;
 
-public class Method {
+public class Method extends Attributes{
     String[] parameters;
     String name;
 
