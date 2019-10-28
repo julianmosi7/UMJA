@@ -71,9 +71,7 @@ public class Controller implements Initializable{
     private void open(File file){
                 try(BufferedReader br = new BufferedReader(new FileReader(file))){
                     while(br.ready()){
-                        String line = br.readLine();
-                        System.out.println(line);
-                        String[] teile = line.split(";");
+                        //übergabe zum parser
                     }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
