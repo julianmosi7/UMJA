@@ -38,8 +38,6 @@ public class Controller implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         txt_projectfolder.setText(documents);
-        //Image image = new Image(getClass().getResourceAsStream("arrow.png"));
-        //btn_projectfolder.setGraphic(new ImageView(image));
     }
 
     public void onDragOver(DragEvent dragEvent) {
@@ -91,6 +89,6 @@ public class Controller implements Initializable{
     }
 
     public void save(File file){
-
+        txt_projectfolder.setText(selectedFile.getAbsolutePath());
     }
 }
