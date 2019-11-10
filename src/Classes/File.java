@@ -1,11 +1,22 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class File {
+    FileType fileType;
     String name;
-    File patent;
-    ArrayList<File> implement;
-    ArrayList<Variable> attributes;
-    ArrayList<Method> methodes;
+    File parent;
+    List<File> implement;
+    List<Variable> attributes;
+    List<Method> methodes;
+
+    public File(FileType fileType, String name, File parent, List<File> implement, List<Variable> attributes, List<Method> methodes) {
+        this.fileType = fileType;
+        this.name = name;
+        this.parent = parent;
+        this.implement = implement;
+        this.attributes = attributes;
+        this.methodes = methodes;
+    }
 }
