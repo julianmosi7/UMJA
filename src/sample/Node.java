@@ -5,16 +5,17 @@ import java.util.ArrayList;
 public class Node {
     Node parent;
     private ArrayList<String> variables;
-    private String strVariables;
+    private String strVariables = "";
     private ArrayList<String> methods;
-    private String strMethods;
+    private String strMethods = "";
+    public String id;
+    public String fileType="";
     public Node(){
         variables = new ArrayList<>();
         methods = new ArrayList<>();
     }
     public Node prepare(){
         //TODO Replace with HTML-Parser
-
         variables.add(strVariables);
         variables.add(strMethods);
         return this;
@@ -37,18 +38,15 @@ public class Node {
         return methods;
     }
     public boolean isEmpty(){
-        if(variables.isEmpty()&&methods.isEmpty()){
+        if(strVariables.isEmpty()&&strMethods.isEmpty()){
             return true;
         }
-        for (String line:variables) {
-            if(!line.trim().equals("")){
-                return false;
-            }
+
+        if(!strVariables.trim().equals("")){
+            return false;
         }
-        for (String line:methods) {
-            if(!line.trim().equals("")){
-                return false;
-            }
+        if(!strMethods.trim().equals("")){
+            return false;
         }
         return true;
     }
