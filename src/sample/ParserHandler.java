@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 
 public class ParserHandler extends DefaultHandler {
 
+    private String pack="";
+    private boolean isPackage=false;
     private Stack<Node> nodes;
     private Node parent,child;
     private String tag;
@@ -20,16 +22,23 @@ public class ParserHandler extends DefaultHandler {
     }
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if(qName.equals("node")){
+        if(qName.equals("node")&&attributes.getLength()==1){
             Node n = new Node();
             n.id = attributes.getValue(0);
+            n.pack=pack;
             nodes.push(n);
-        }else if(qName.equals("edge")){
-            parent = getNodeById(attributes.getValue(1));
-            child = getNodeById(attributes.getValue(2));
+
+            isPackage=false;
+        }else if(qName.equals("node")){
+            isPackage=true;
+            pack="";
+
+        } else if(qName.equals("edge")){
+            parent = getNodeById(attributes.getValue(2));
+            child = getNodeById(attributes.getValue(1));
         }else if(qName.equals("y:Arrows")){
             if(attributes.getValue(1).equals("white_delta")){
-                child.parent = parent;
+                child.implemented.add(parent);
             }
         }else if(qName.equals("y:UML")){
             nodes.peek().fileType = attributes.getValue(3).equals("")? "class":attributes.getValue(3);
@@ -47,6 +56,14 @@ public class ParserHandler extends DefaultHandler {
         }else if(tag.equals("y:MethodLabel")){
             String s = new String(ch, start, length);
             nodes.peek().appendMetod(new String(ch, start, length));
+        }else if(tag.equals("y:NodeLabel")){
+            if(!isPackage){
+                nodes.peek().fileName = new String(ch, start, length);
+            }else{
+                String p=new String(ch, start, length);
+                pack=pack.equals("")?p:pack;
+            }
+
         }
 
         }

@@ -3,16 +3,19 @@ package sample;
 import java.util.ArrayList;
 
 public class Node {
-    Node parent;
+    public ArrayList<Node> implemented;
     private ArrayList<String> variables;
     private String strVariables = "";
     private ArrayList<String> methods;
     private String strMethods = "";
     public String id;
     public String fileType="";
+    public String fileName="";
+    public String pack="";
     public Node(){
         variables = new ArrayList<>();
         methods = new ArrayList<>();
+        implemented = new ArrayList<>();
     }
     public Node prepare(){
         //TODO Replace with HTML-Parser
