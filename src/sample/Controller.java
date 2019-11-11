@@ -69,6 +69,9 @@ public class Controller implements Initializable{
     private void open(File file){
                 try(BufferedReader br = new BufferedReader(new FileReader(file))){
                     while(br.ready()){
+                        String line = br.readLine();
+                        System.out.println(line);
+
                         //übergabe zum parser
                     }
                 } catch (FileNotFoundException e) {
@@ -90,5 +93,9 @@ public class Controller implements Initializable{
 
     public void save(File file){
         txt_projectfolder.setText(selectedFile.getAbsolutePath());
+    }
+
+    public void button_click(ActionEvent actionEvent) {
+
     }
 }

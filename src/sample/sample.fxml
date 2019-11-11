@@ -15,6 +15,6 @@
             <Label layoutX="85.0" layoutY="92.0" text="Drop item here" />
          </children>
       </AnchorPane>
-      <Button fx:id="btn_convert" layoutX="333.0" layoutY="298.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Convert" />
+      <Button fx:id="btn_convert" layoutX="333.0" layoutY="298.0" mnemonicParsing="false" onAction="#button_click" prefHeight="34.0" prefWidth="87.0" text="Convert" />
    </children>
 </AnchorPane>
