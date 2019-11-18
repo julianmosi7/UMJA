@@ -13,8 +13,4 @@ public class Method extends Attributes{
     }
 
 
-    @Override
-    public String toString() {
-        return "";
-    }
 }
