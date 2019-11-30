@@ -41,7 +41,7 @@ public class ParserHandler extends DefaultHandler {
                 child.implemented.add(parent);
             }
         }else if(qName.equals("y:UML")){
-            nodes.peek().fileType = attributes.getValue(3).equals("")? "class":attributes.getValue(3);
+            nodes.peek().fileType = attributes.getValue(attributes.getLength()-2).equals("")? "class":attributes.getValue(attributes.getLength()-2);
         }
         //TODO Add implements
         tag = qName;
@@ -66,22 +66,22 @@ public class ParserHandler extends DefaultHandler {
 
         }
 
-        }
-
-        public ArrayList<Node> getNodes(){
-            ArrayList<Node> ret = new ArrayList<>();
-            for (Node node:nodes) {
-                if(!node.isEmpty()){ ret.add(node.prepare().clean());}
-            }
-            return ret;
-        }
-        private Node getNodeById(String id){
-            for (Node n:nodes) {
-                if(n.id.equals(id)){
-                    return n;
-                }
-            }
-            return null;
-        }
-
     }
+
+    public ArrayList<Node> getNodes(){
+        ArrayList<Node> ret = new ArrayList<>();
+        for (Node node:nodes) {
+            if(!node.isEmpty()){ ret.add(node.prepare().clean());}
+        }
+        return ret;
+    }
+    private Node getNodeById(String id){
+        for (Node n:nodes) {
+            if(n.id.equals(id)){
+                return n;
+            }
+        }
+        return null;
+    }
+
+}

@@ -33,7 +33,7 @@ public class Parser {
         }
         ArrayList<Node> nodes = handler.getNodes();
 
-        //TODO Prepare Compiler
+        ArrayList<Classes.File> files = PrepareCompile.prepareCompile(nodes);
 
     }
 }
