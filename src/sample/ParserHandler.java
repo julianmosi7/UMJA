@@ -41,7 +41,7 @@ public class ParserHandler extends DefaultHandler {
                 child.implemented.add(parent);
             }
         }else if(qName.equals("y:UML")){
-            nodes.peek().fileType = attributes.getValue(3).equals("")? "class":attributes.getValue(3);
+            nodes.peek().fileType = attributes.getValue(attributes.getLength()-2).equals("")? "class":attributes.getValue(attributes.getLength()-2);
         }
         //TODO Add implements
         tag = qName;
