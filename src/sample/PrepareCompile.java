@@ -8,15 +8,6 @@ import java.util.List;
 
 public class PrepareCompile {
     public static ArrayList<File> prepareCompile(ArrayList<Node> nodes){
-        //variable = - name : String
-        //variable2 = static + number : int
-        //variable3 = static + number2 = 21 : int
-
-        //method = static + MethodName(user : User, name : Name) : void
-
-        //node = "variable" + "variable2"  + "variable3"
-        //Classes.File file = Variable objekt erstellen. Atribute anhand von variablen setzten.
-        //File f= new FIle ()
         FileType fileType = null;
         String fileName = "";
         List<Variable> attributes = new ArrayList<>();
@@ -35,10 +26,14 @@ public class PrepareCompile {
             }
             if(fileType!=FileType.Enum) {
                 for (String var : node.getVariables()) {
-                    attributes.add(parseVariable(var));
+                        Variable vari = parseVariable(var);
+                        attributes.add(vari);
+
                 }
                 for (String method : node.getMethods()) {
-                    methodes.add(parseMethod(method));
+                        Method metho = parseMethod(method);
+                        methodes.add(metho);
+
                 }
             }
             fileName = node.fileName;
@@ -99,6 +94,7 @@ public class PrepareCompile {
             }
         }
         methodName = methodNameAndPara.substring(0 , methodNameAndPara.indexOf("("));
+        methodDataType = methodDataType.replace("\n", "");
         method = new Method(isStatic, isPublic, methodDataType, paras, methodName);
         return method;
     }
@@ -109,7 +105,7 @@ public class PrepareCompile {
         String paraName = parts[0];
         Variable parameter;
 
-        parameter = new Variable(false, false, paraDataType, paraName, "");
+        parameter = new Variable(false, false, paraDataType, paraName, null);
         return parameter;
     }
 
@@ -129,23 +125,8 @@ public class PrepareCompile {
                 break;
             }
         }
+        varDataType = varDataType.replace("\n", "");
 
-        /*if(var.contains("=")){
-            for(int i = 0; i < parts.length; i++) {
-                if (parts[i].equals("+") || parts[i].equals("-")) {
-                    varName = parts[i + 1];
-                    varValue = parts[i + 3];
-                }
-            }
-        }else{
-
-            for(int i = 0; i < parts.length; i++){
-                if(parts[i].equals("+") || parts[i].equals("-")){
-                    varName = parts[i+1];
-                }
-                varValue = "";
-            }
-        }*/
         variable = new Variable(isStatic, isPublic, varDataType, varName, varValue);
         return variable;
     }
