@@ -71,7 +71,13 @@ public class ParserHandler extends DefaultHandler {
     public ArrayList<Node> getNodes(){
         ArrayList<Node> ret = new ArrayList<>();
         for (Node node:nodes) {
-            if(!node.isEmpty()){ ret.add(node.prepare().clean());}
+            try {
+                if (!node.isEmpty()) {
+                    ret.add(node.prepare().clean());
+                }
+            }catch (Exception e){
+                System.out.println();
+            }
         }
         return ret;
     }

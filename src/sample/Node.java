@@ -29,11 +29,17 @@ public class Node {
     }
 
     public void appendVariables(String append){
-        strVariables+=append;
+        if(!append.startsWith("\n ")){
+            strVariables+=append;
+        }
+
     }
 
     public void appendMetod(String append){
-        strMethods+=append;
+        if(!append.startsWith("\n ")){
+            strMethods+=append;
+        }
+
     }
 
     public ArrayList<String> getVariables(){

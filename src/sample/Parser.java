@@ -34,6 +34,6 @@ public class Parser {
         ArrayList<Node> nodes = handler.getNodes();
 
         ArrayList<Classes.File> files = PrepareCompile.prepareCompile(nodes);
-
+        System.out.println();
     }
 }

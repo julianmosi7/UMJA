@@ -93,7 +93,11 @@ public class PrepareCompile {
                 break;
             }
         }
-        methodName = methodNameAndPara.substring(0 , methodNameAndPara.indexOf("("));
+        try {
+            methodName = methodNameAndPara.substring(0, methodNameAndPara.indexOf("("));
+        }catch (Exception e){
+            System.out.println();
+        }
         methodDataType = methodDataType.replace("\n", "");
         method = new Method(isStatic, isPublic, methodDataType, paras, methodName);
         return method;
