@@ -24,4 +24,8 @@ public class Main extends Application {
 
 
     }
+
+    public static void execute(String inputPath, String outputPath){
+
+    }
 }
