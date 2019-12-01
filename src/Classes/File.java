@@ -43,9 +43,23 @@ public class File {
 
 
         }else if(fileType.equals((FileType.Interface))){
+            str.append("interface " + name + "{");
+            str.append("\n");
+            for (Variable variable:
+                 attributes) {
+                str.append(variable.toString());
+                str.append("\n");
+            }
+            for (Method method:
+                 methodes) {
+                str.append(method.toStringInterface());
+            }
+            str.append("}");
 
         }else if(fileType.equals((FileType.Enum))){
-
+            
+        }else {
+            return "Fehler";
         }
     }
 }

@@ -25,4 +25,7 @@ public class Method extends Attributes{
         return str.toString()+ " static " + returntype + " " + name + "(" + parameters + "){ }";
     }
 
+    public String toStringInterface(){
+        return returntype + " " + name + "(" + parameters + ");";
+    }
 }
