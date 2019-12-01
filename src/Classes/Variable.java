@@ -10,9 +10,4 @@ public class Variable extends Attributes {
         this.value = value;
     }
 
-
-    @Override
-    public String toString() {
-        return "";
-    }
 }
