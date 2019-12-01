@@ -10,4 +10,21 @@ public class Variable extends Attributes {
         this.value = value;
     }
 
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        if(isPublic){
+            str.append("public");
+        }else{
+            str.append("private");
+        }
+        if(isStatic){
+            str.append(" static");
+        }
+        if (value.isEmpty()) {
+            return str.toString() + returntype + " " + name + ";";
+        } else
+            return str.toString() + returntype + " " + name + " = " + value + ";";
+    }
+
 }
+

@@ -12,5 +12,17 @@ public class Method extends Attributes{
         this.name = name;
     }
 
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        if (isPublic) {
+            str.append(("public"));
+        }else{
+            str.append(("private"));
+        }
+        if (isStatic) {
+            str.append(" static");
+        }
+        return str.toString()+ " static " + returntype + " " + name + "(" + parameters + "){ }";
+    }
 
 }
