@@ -18,9 +18,12 @@ public class Node {
         implemented = new ArrayList<>();
     }
     public Node prepare(){
-        //TODO Replace with HTML-Parser
-        variables.add(strVariables);
-        variables.add(strMethods);
+        for (String toAdd:HTMLParser.htmlToString(strVariables)) {
+            variables.add(toAdd);
+        }
+        for (String toAdd:HTMLParser.htmlToString(strMethods)) {
+            methods.add(toAdd);
+        }
         return this;
 
     }
