@@ -67,6 +67,7 @@ public class File {
         }else {
             return "Fehler";
         }
+        return "";
     }
 }
 
