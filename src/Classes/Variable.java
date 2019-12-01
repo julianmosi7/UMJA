@@ -26,5 +26,9 @@ public class Variable extends Attributes {
             return str.toString() + returntype + " " + name + " = " + value + ";";
     }
 
+    public String toStringEnum(){
+        return name;
+    }
+
 }
 

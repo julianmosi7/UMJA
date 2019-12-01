@@ -57,7 +57,13 @@ public class File {
             str.append("}");
 
         }else if(fileType.equals((FileType.Enum))){
-            
+            str.append("enum " + name + "{");
+            str.append("\n");
+            for (Variable variable:
+                 attributes) {
+                str.append(variable.toString() + ",");
+            }
+            str.append(";");
         }else {
             return "Fehler";
         }
