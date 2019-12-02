@@ -70,7 +70,7 @@ public class File {
             str.append("\n");
             for (Variable variable:
                  attributes) {
-                str.append(variable.toString() + ",");
+                str.append(variable.toStringEnum() + ",");
             }
             str.append(";");
         }else {
