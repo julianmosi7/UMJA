@@ -25,9 +25,18 @@ public class File {
     public String toString(){
         StringBuilder str = new StringBuilder();
         if(fileType.equals(FileType.Class)){
-            str.append("public class" + name + "{");
-            //implements eine liste??
-            //parent??
+            str.append("public class" + name);
+            if(parent != null){
+                str.append(" extends " + parent.name);
+            }
+            if(implement != null){
+                str.append("implements ")
+                for (File files:
+                     implement) {
+                    str.append(files.name + " ");
+                }
+            }
+            str.append("{");
             str.append("\n");
             for (Variable variable:
                  attributes) {
