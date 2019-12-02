@@ -30,7 +30,7 @@ public class File {
                 str.append(" extends " + parent.name);
             }
             if(implement != null){
-                str.append("implements ")
+                str.append("implements ");
                 for (File files:
                      implement) {
                     str.append(files.name + " ");
