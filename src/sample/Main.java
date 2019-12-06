@@ -1,5 +1,6 @@
 package sample;
 
+import Classes.TestData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +20,8 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+        //launch(args);
+        Compliler.compile(TestData.testData(), "out");
 
 
 
