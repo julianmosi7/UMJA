@@ -25,12 +25,12 @@ public class File {
     public String toString(){
         StringBuilder str = new StringBuilder();
         if(fileType.equals(FileType.Class)){
-            str.append("public class" + name);
+            str.append("public class " + name);
             if(parent != null){
                 str.append(" extends " + parent.name);
             }
             if(implement != null){
-                str.append("implements ");
+                str.append(" implements ");
                 for (File files:
                      implement) {
                     str.append(files.name + " ");
@@ -52,7 +52,7 @@ public class File {
 
 
         }else if(fileType.equals((FileType.Interface))){
-            str.append("interface " + name + "{");
+            str.append(" interface " + name + "{");
             str.append("\n");
             for (Variable variable:
                  attributes) {
@@ -63,20 +63,24 @@ public class File {
                  methodes) {
                 str.append(method.toStringInterface());
             }
+            str.append("\n");
             str.append("}");
 
         }else if(fileType.equals((FileType.Enum))){
             str.append("enum " + name + "{");
             str.append("\n");
-            for (Variable variable:
-                 attributes) {
-                str.append(variable.toStringEnum() + ",");
+            for(int i = 0;i < attributes.size();i++){
+                str.append(attributes.get(i).toStringEnum());
+                if(i != attributes.size()-1){
+                    str.append(", ");
+                }
             }
-            str.append(";");
+            str.append("\n");
+            str.append("}");
         }else {
             return "Fehler";
         }
-        return "";
+        return str.toString();
     }
 }
 

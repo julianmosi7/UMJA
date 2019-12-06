@@ -24,6 +24,5 @@ public class Main extends Application {
         Compliler.compile(TestData.testData(), "out");
 
 
-
     }
 }

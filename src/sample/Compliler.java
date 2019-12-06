@@ -14,7 +14,9 @@ public class Compliler {
             java.io.File outFile = new java.io.File(path + "\\" + f.name + ".java");
             try {
                 FileWriter fr=new FileWriter(outFile);
-                fr.write(outFile.toString());
+                fr.write(f.toString());
+                fr.flush();
+                fr.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

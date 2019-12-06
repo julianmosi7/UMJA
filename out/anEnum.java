@@ -1,0 +1,3 @@
+enum anEnum{
+FIRST, SECOND
+}
