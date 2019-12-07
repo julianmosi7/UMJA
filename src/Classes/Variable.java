@@ -20,7 +20,7 @@ public class Variable extends Attributes {
         if(isStatic){
             str.append(" static ");
         }
-        if (value.isEmpty()) {
+        if (value == null) {
             return str.toString() + returntype + " " + name + ";";
         } else
             if(returntype.equals("String")){

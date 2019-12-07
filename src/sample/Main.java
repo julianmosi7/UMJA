@@ -23,11 +23,12 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //launch(args);
-        Parser.parser("D:\\Schule\\4.Klasse\\AUD\\audUML.graphml");
+        execute("D:\\Schule\\4.Klasse\\AUD\\audUML.graphml", "out");
 
 
     }
 
     public static void execute(String inpath, String outpath) {
+        Compliler.compile(Parser.parser(inpath), outpath);
     }
 }

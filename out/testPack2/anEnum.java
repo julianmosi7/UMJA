@@ -1,3 +1,0 @@
-enum anEnum{
-FIRST, SECOND
-}

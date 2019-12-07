@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Parser {
-    public static void parser(String filepath){
+    public static ArrayList<Classes.File> parser(String filepath){
         System.out.println("Start");
         ParserHandler handler = new ParserHandler();
         SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -33,7 +33,6 @@ public class Parser {
         }
         ArrayList<Node> nodes = handler.getNodes();
 
-        ArrayList<Classes.File> files = PrepareCompile.prepareCompile(nodes);
-        System.out.println();
+        return PrepareCompile.prepareCompile(nodes);
     }
 }
