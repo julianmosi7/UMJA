@@ -15,13 +15,16 @@ public class HTMLParser {
         int arrayPos = -1;
         int arrayLength = 0;
         String[] strings = stringtext.split("\\n");
+
         for (String string : strings) {
             String[] parts = string.split(";");
             for (int j = 0; j < parts.length; j++) {
                 if (parts[j].contains("+") || parts[j].contains("-") || parts[j].contains("#")) arrayLength++;
 
             }
+
         }
+
 
         arrayStrings = new String[arrayLength];
 
@@ -33,14 +36,22 @@ public class HTMLParser {
             } else if(string.contains(":") && string.contains("(")){
                 arrayPos++;
                 arrayStrings[arrayPos] = string;
-            }
-            else{
+            } else{
 
                 String[] parts = string.split(";");
+                if(strings[0].contains(",")){
+                    parts = null;
+                    parts = string.split(",");
+                    String[] enumStrings = new String[parts.length];
+                    for(int i = 0; i < parts.length; i++){
+                        enumStrings[i] = parts[i];
+                    }
+                    return enumStrings;
+                }
 
                 for (int i = 0; i < parts.length; i++) {
 
-                    if (parts[i].equals("u" + codeGt)) {
+                    if (parts[i].contains("</u>")) {
                         isStatic = true;
                         finishedString += "static ";
                     } else {
@@ -107,9 +118,21 @@ public class HTMLParser {
                     if (parts[i].contains(" : ")) {
                         String[] infoForClassOrVariable = parts[i].split(" : ");
                         for (int j = 0; j < infoForClassOrVariable.length; j++) {
-                            if (infoForClassOrVariable[j].contains(codeLt)) {
+                            if (infoForClassOrVariable[j].contains(codeLt) || infoForClassOrVariable[j].contains("/"+codeLt)) {
                                 infoForClassOrVariable[j] = infoForClassOrVariable[j].replace(codeLt, "");
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("/"+codeLt, "");
+                            }
+                            if (infoForClassOrVariable[j].contains(codeGt) || infoForClassOrVariable[j].contains("/"+codeGt)) {
                                 infoForClassOrVariable[j] = infoForClassOrVariable[j].replace(codeGt, "");
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("/"+codeGt, "");
+                            }
+                            if (infoForClassOrVariable[j].contains("<html>") || infoForClassOrVariable[j].contains("</html>")) {
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("<html>", "");
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("</html>", "");
+                            }
+                            if (infoForClassOrVariable[j].contains("<u>") || infoForClassOrVariable[j].contains("</u>")) {
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("<u>", "");
+                                infoForClassOrVariable[j] = infoForClassOrVariable[j].replace("</u>", "");
                             }
                         }
                         if (isMethod) {
@@ -120,9 +143,11 @@ public class HTMLParser {
                         clipString = "";
                         if (finishedString.contains("static")) {
                             String[] staticFirst = finishedString.split(" ");
-                            finishedString = staticFirst[1] + " " + staticFirst[0];
-                            for (int k = 2; k < staticFirst.length; k++) {
-                                finishedString += " " + staticFirst[k];
+                            if(!staticFirst[0].equals("static")) {
+                                finishedString = staticFirst[1] + " " + staticFirst[0];
+                                for (int k = 2; k < staticFirst.length; k++) {
+                                    finishedString += " " + staticFirst[k];
+                                }
                             }
                             finishedString += " ";
                         }

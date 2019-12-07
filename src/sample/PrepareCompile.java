@@ -1,3 +1,4 @@
+
 package sample;
 
 import Classes.*;
@@ -26,19 +27,26 @@ public class PrepareCompile {
             }
             if(fileType!=FileType.Enum) {
                 for (String var : node.getVariables()) {
-                        Variable vari = parseVariable(var);
-                        attributes.add(vari);
+                    Variable vari = parseVariable(var);
+                    attributes.add(vari);
 
                 }
                 for (String method : node.getMethods()) {
-                        Method metho = parseMethod(method);
-                        methodes.add(metho);
+                    Method metho = parseMethod(method);
+                    methodes.add(metho);
 
+                }
+            } else {
+                for(String enu : node.getVariables()){ //Action
+                    Variable enumerat = parseEnum(enu);
+                    attributes.add(enumerat);
                 }
             }
             fileName = node.fileName;
             pack = node.pack;
             File f = new File(fileType, fileName, null, new ArrayList<File>(), attributes, methodes, pack);
+            attributes=new ArrayList<>();
+            methodes=new ArrayList<>();
             returnList.add(f);
         }
         for (Node n:nodes) {
@@ -54,6 +62,16 @@ public class PrepareCompile {
         }
 
         return returnList;
+    }
+
+    private static Variable parseEnum(String enu) {
+
+        String varName = enu;
+        Variable variable;
+        varName = varName.replace("\n", "");
+
+        variable = new Variable(null, null, null, varName, null);
+        return variable;
     }
 
     private static File getFileByName(String name, ArrayList<File> files){
@@ -73,16 +91,28 @@ public class PrepareCompile {
     private static Method parseMethod(String var) {
         String bracket = var.substring(var.indexOf("(")+1 , var.indexOf(")"));
         String[] parameters = bracket.split(", ");
-        Variable[] paras = new Variable[parameters.length];
-        for (int i = 0; i < parameters.length; i++) {
-            paras[i] = parameterParser(parameters[i]);
+        Variable[] paras;
+        if(!parameters[0].equals("")) {
+            paras = new Variable[parameters.length];
+            for (int i = 0; i < parameters.length; i++) {
+                paras[i] = parameterParser(parameters[i]);
+            }
+        } else{
+            paras = null;
         }
 
 
         String[] parts = var.split(" ");
         boolean isStatic = var.contains("static");
         boolean isPublic = var.contains("+");
-        String methodDataType = parts[parts.length - 1];
+        String methodDataType = null;
+        for (int i = 0; i < parts.length; i++) {
+            if(parts[i].contains(":")){
+                methodDataType = parts[parts.length - 1];
+                methodDataType = methodDataType.replace("\n", "");
+            }
+        }
+
         String methodName = "";
         String methodNameAndPara = "";
         Method method;
@@ -90,15 +120,11 @@ public class PrepareCompile {
         for (int i = 0; i < parts.length; i++) {
             if (parts[i].equals("+") || parts[i].equals("-")) {
                 methodNameAndPara = parts[i + 1];
+                methodName = methodNameAndPara.substring(0, methodNameAndPara.indexOf("("));
                 break;
             }
         }
-        try {
-            methodName = methodNameAndPara.substring(0, methodNameAndPara.indexOf("("));
-        }catch (Exception e){
-            System.out.println();
-        }
-        methodDataType = methodDataType.replace("\n", "");
+
         method = new Method(isStatic, isPublic, methodDataType, paras, methodName);
         return method;
     }

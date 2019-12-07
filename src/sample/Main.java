@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -21,8 +23,11 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //launch(args);
-        Compliler.compile(TestData.testData(), "out");
+        Parser.parser("D:\\Schule\\4.Klasse\\AUD\\audUML.graphml");
 
 
+    }
+
+    public static void execute(String inpath, String outpath) {
     }
 }
