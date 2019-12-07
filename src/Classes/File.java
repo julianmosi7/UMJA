@@ -20,6 +20,68 @@ public class File {
         this.attributes = attributes;
         this.methodes = methodes;
         this.pack=pack;
-    }}
+    }
+
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+        if(fileType.equals(FileType.Class)){
+            str.append("public class " + name);
+            if(parent != null){
+                str.append(" extends " + parent.name);
+            }
+            if(implement.size()!=0){
+                str.append(" implements ");
+                for (File files:
+                     implement) {
+                    str.append(files.name + " ");
+                }
+            }
+            str.append("{");
+            str.append("\n");
+            for (Variable variable:
+                 attributes) {
+                str.append(variable.toString());
+                str.append("\n");
+            }
+            for (Method method:
+                 methodes) {
+                str.append(method.toString());
+                str.append("\n");
+            }
+            str.append("}");
+
+
+        }else if(fileType.equals((FileType.Interface))){
+            str.append(" interface " + name + "{");
+            str.append("\n");
+            for (Variable variable:
+                 attributes) {
+                str.append(variable.toString());
+                str.append("\n");
+            }
+            for (Method method:
+                 methodes) {
+                str.append(method.toStringInterface());
+            }
+            str.append("\n");
+            str.append("}");
+
+        }else if(fileType.equals((FileType.Enum))){
+            str.append("enum " + name + "{");
+            str.append("\n");
+            for(int i = 0;i < attributes.size();i++){
+                str.append(attributes.get(i).toStringEnum());
+                if(i != attributes.size()-1){
+                    str.append(", ");
+                }
+            }
+            str.append("\n");
+            str.append("}");
+        }else {
+            return "Fehler";
+        }
+        return str.toString();
+    }
+}
 
 

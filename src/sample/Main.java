@@ -1,5 +1,6 @@
 package sample;
 
+import Classes.TestData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,21 +21,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //launch(args);
-        Parser.parser("C:\\Users\\matth\\Desktop\\Schule\\4.Klasse\\AUD\\sdg.graphml");
-       /* HTMLParser.htmlToString("+ Customer(name : String)\n" +
-                "\n" +
-                "+ getLibrary() : Game[]\n" +
-                "+ addToLibrary(game : Game) : void\n" +
-                "+ toString() : String\n" +
-                "              \n" +
-                "            \n" +
-                "          \n" +
-                "        \n" +
-                "        ");
-*/
-    }
+        Compliler.compile(TestData.testData(), "out");
 
-    public static void execute(String inputPath, String outputPath){
 
     }
 }

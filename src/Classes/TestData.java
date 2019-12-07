@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TestData {
-    ArrayList<File> files = new ArrayList<>();
+    List<File> files = new ArrayList<>();
     public static List<File> testData(){
         File aInterface = new File(FileType.Interface, "anInterface", null, Arrays.asList(), Arrays.asList(
                 new Variable(true,true,"double", "someConst", "3.14")
@@ -28,7 +28,7 @@ public class TestData {
                         new Variable(true, null, "String", "stringPar",null),
                         new Variable(true, null, "int", "intPar",null)
                 }, "Class1Method")
-        ), "testPack2");
+        ), "testPack2.test");
 
         File aEnum = new File(FileType.Enum, "anEnum", null, Arrays.asList(), Arrays.asList(
                 new Variable(null, null, "Enum", "FIRST", null),

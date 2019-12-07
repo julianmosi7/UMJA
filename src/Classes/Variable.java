@@ -10,4 +10,32 @@ public class Variable extends Attributes {
         this.value = value;
     }
 
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        if(isPublic){
+            str.append("    public ");
+        }else{
+            str.append("    private ");
+        }
+        if(isStatic){
+            str.append(" static ");
+        }
+        if (value.isEmpty()) {
+            return str.toString() + returntype + " " + name + ";";
+        } else
+            if(returntype.equals("String")){
+                return str.toString() + returntype + " " + name + " = " + "\"" +value + "\"" + ";";
+            }
+            return str.toString() + returntype + " " + name + " = " + value + ";";
+        }
+
+    public String toStringEnum(){
+        return name;
+    }
+
+    public String toParamerterString(){
+        return returntype + " " + name;
+    }
+
 }
+
