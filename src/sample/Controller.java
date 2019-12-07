@@ -28,6 +28,7 @@ public class Controller implements Initializable{
 
     public AnchorPane draganddrop;
     public TextField txt_projectfolder;
+    String inpath;
     public Button btn_projectfolder;
     List<File> files;
     final FileChooser fileChooser = new FileChooser();
@@ -67,18 +68,7 @@ public class Controller implements Initializable{
     }
 
     private void open(File file){
-                try(BufferedReader br = new BufferedReader(new FileReader(file))){
-                    while(br.ready()){
-                        String line = br.readLine();
-                        System.out.println(line);
-
-                        //übergabe zum parser
-                    }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-        }
+        inpath=file.getAbsolutePath();
     }
 
 
@@ -96,6 +86,8 @@ public class Controller implements Initializable{
     }
 
     public void button_click(ActionEvent actionEvent) {
-
+        if(inpath!=null&&!inpath.equals("")){
+            Main.execute(inpath, txt_projectfolder.getText());
+        }
     }
 }

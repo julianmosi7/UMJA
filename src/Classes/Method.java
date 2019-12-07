@@ -23,7 +23,7 @@ public class Method extends Attributes{
         if (isStatic) {
             str.append(" static");
         }
-        str.append(" static " + returntype + " " + name + "(");
+        str.append(" " + (returntype!=null?returntype+" ":"") + name + "(");
         if(parameters != null) {
 
             for(int i = 0;i < parameters.length;i++){
@@ -43,14 +43,14 @@ public class Method extends Attributes{
     public String toStringInterface(){
         StringBuilder str = new StringBuilder();
         if (isPublic) {
-            str.append(("    public"));
+            str.append(("    public "));
         }else{
-            str.append(("    private"));
+            str.append(("    private "));
         }
         if (isStatic) {
-            str.append(" static");
+            str.append(" static ");
         }
-        str.append(" static " + returntype + " " + name + "(");
+        str.append((returntype!=null?returntype:"") + " " + name + "(");
         if(parameters != null){
             for(int i = 0;i < parameters.length;i++){
                 str.append(parameters[i].toParamerterString());

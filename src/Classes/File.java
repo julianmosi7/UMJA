@@ -24,6 +24,7 @@ public class File {
 
     public String toString(){
         StringBuilder str = new StringBuilder();
+        str.append("package " +pack+";\n");
         if(fileType.equals(FileType.Class)){
             str.append("public class " + name);
             if(parent != null){
@@ -31,10 +32,15 @@ public class File {
             }
             if(implement.size()!=0){
                 str.append(" implements ");
-                for (File files:
-                     implement) {
-                    str.append(files.name + " ");
+                for (int i=0;i<implement.size();i++) {
+                    File files=implement.get(i);
+                    str.append(files.name);
+                    if(i<implement.size()-1){
+                        str.append(", ");
+                    }
+
                 }
+
             }
             str.append("{");
             str.append("\n");
@@ -52,7 +58,7 @@ public class File {
 
 
         }else if(fileType.equals((FileType.Interface))){
-            str.append(" interface " + name + "{");
+            str.append("public interface " + name + "{");
             str.append("\n");
             for (Variable variable:
                  attributes) {
@@ -67,7 +73,7 @@ public class File {
             str.append("}");
 
         }else if(fileType.equals((FileType.Enum))){
-            str.append("enum " + name + "{");
+            str.append("public enum " + name + "{");
             str.append("\n");
             for(int i = 0;i < attributes.size();i++){
                 str.append(attributes.get(i).toStringEnum());

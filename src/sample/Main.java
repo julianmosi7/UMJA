@@ -22,8 +22,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        //launch(args);
-        execute("D:\\Schule\\4.Klasse\\AUD\\audUML.graphml", "out");
+        launch(args);
 
 
     }

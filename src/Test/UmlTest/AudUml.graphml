@@ -19,7 +19,7 @@
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
-              <y:Geometry height="194.0" width="714.0" x="30.09113545816706" y="-413.3431274900399"/>
+              <y:Geometry height="179.0" width="714.0" x="30.09113545816706" y="-413.3431274900399"/>
               <y:Fill color="#FFFFFFE6" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed_dotted" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="3.610619469026517" xml:space="preserve" y="-22.701171875">Package_3<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.49494310998735785" nodeRatioY="-0.5" offsetX="0.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -31,7 +31,7 @@
               </y:StyleProperties>
               <y:State autoResize="true" closed="false" closedHeight="80.0" closedWidth="100.0"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+              <y:BorderInsets bottom="9" bottomF="8.762259705488646" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
             </y:GenericGroupNode>
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
               <y:Geometry height="55.0" width="85.0" x="-111.5" y="-59.5"/>
@@ -63,19 +63,17 @@
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="164.0" width="208.0" x="521.0911354581671" y="-398.3431274900399"/>
+              <y:Geometry height="134.0" width="208.0" x="521.0911354581671" y="-392.1053871955285"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.14990234375" x="77.425048828125" xml:space="preserve" y="3.0">Class_2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- name : String
-- library : Game[]
-- wishlist : Game[]</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ Customer(name : String)
+                <y:AttributeLabel xml:space="preserve">- par : String</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Class_2(par : String)
 
-+ getLibrary() : Game[]
-+ addToLibrary(game : Game) : void
-+ toString() : String</y:MethodLabel>
++ Method() : Double[]
++ Method2(par : int) : void
++ Method3() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -89,9 +87,9 @@
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.18994140625" x="74.905029296875" xml:space="preserve" y="26.701171875">Interface<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">&lt;html&gt;+ &lt;u&gt;CAPACITY = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ getWishlist() : Game[]
-+ addToWishlist(game : Game) : void</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">&lt;html&gt;- &lt;u&gt;constVar = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : int[]
++ Method1(par : int) : void</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -106,9 +104,9 @@
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.14990234375" x="77.425048828125" xml:space="preserve" y="3.0">Class_1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
                 <y:AttributeLabel xml:space="preserve">- wishlist : Game[]</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ Visitor()
+                <y:MethodLabel xml:space="preserve">+ Class_1()
 
-+ toString() : String</y:MethodLabel>
++ Method() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -120,7 +118,7 @@
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
-              <y:Geometry height="590.0268924302788" width="784.8560756972109" x="-817.5851593625497" y="-413.3431274900399"/>
+              <y:Geometry height="405.11273379290833" width="784.8560756972109" x="-817.5851593625497" y="-413.3431274900399"/>
               <y:Fill color="#FFFFFFE6" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed_dotted" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="4.0" xml:space="preserve" y="-22.701171875">Package_1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -132,7 +130,7 @@
               </y:StyleProperties>
               <y:State autoResize="true" closed="false" closedHeight="80.0" closedWidth="100.0"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="72" bottomF="72.12411847672786" left="0" leftF="0.0" right="8" rightF="7.5" top="0" topF="0.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="8" rightF="7.5" top="0" topF="0.0"/>
             </y:GenericGroupNode>
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
               <y:Geometry height="55.0" width="85.0" x="-111.5" y="-59.5"/>
@@ -164,7 +162,7 @@
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="87.0" width="156.0" x="-211.22908366533875" y="-170.32968127490045"/>
+              <y:Geometry height="87.0" width="156.0" x="-211.22908366533878" y="-236.57021675013476"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.11181640625" x="57.944091796875" xml:space="preserve" y="26.701171875">Enum<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -180,14 +178,14 @@ PROP_3, PROP_4</y:AttributeLabel>
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="164.0" width="208.0" x="-504.54930278884456" y="-208.82968127490045"/>
+              <y:Geometry height="87.0" width="208.0" x="-504.54930278884456" y="-236.57021675013476"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.14990234375" x="64.425048828125" xml:space="preserve" y="3.0">ParentClass<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
                 <y:AttributeLabel xml:space="preserve">- var_1 : String
 - var_2 : String</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">Method() : String</y:MethodLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -196,14 +194,13 @@ PROP_3, PROP_4</y:AttributeLabel>
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="134.0" width="208.0" x="-802.5851593625497" y="-193.82968127490045"/>
+              <y:Geometry height="117.0" width="208.0" x="-802.5851593625497" y="-260.07021675013476"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.41357421875" x="64.793212890625" xml:space="preserve" y="3.0">ChildClass2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">
-int var</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ChildClass2()
+                <y:AttributeLabel xml:space="preserve">- int var</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ ChildClass2()
 
 + Method_1() : int[]
 + Method_2(par : String) : void</y:MethodLabel>
@@ -215,13 +212,13 @@ int var</y:AttributeLabel>
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="111.0" width="208.0" x="-504.54930278884456" y="-398.3431274900399"/>
+              <y:Geometry height="97.30896921017404" width="208.0" x="-504.54930278884456" y="-398.3431274900399"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="72.64990234375" x="67.675048828125" xml:space="preserve" y="26.701171875">Interface_1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">&lt;html&gt;+ &lt;u&gt;constVar = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+Method() : Double</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">&lt;html&gt;- &lt;u&gt;constVar = 2 : int&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : Double</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -230,7 +227,7 @@ int var</y:AttributeLabel>
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="61.87588152327214" width="208.0" x="-504.54930278884456" y="27.683764940238973"/>
+              <y:Geometry height="61.87588152327214" width="208.0" x="-504.54930278884456" y="-85.10627522040369"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.41357421875" x="64.793212890625" xml:space="preserve" y="3.0">ChildClass1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -248,10 +245,10 @@ int var</y:AttributeLabel>
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
-              <y:Geometry height="164.0" width="475.99999999999994" x="30.091135458167003" y="-170.32968127490045"/>
+              <y:Geometry height="147.0" width="476.0" x="30.091135458167003" y="-200.59312749003988"/>
               <y:Fill color="#FFFFFFE6" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed_dotted" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="3.9999999999999716" xml:space="preserve" y="-22.701171875">Package_4<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="4.0" xml:space="preserve" y="-22.701171875">Package_4<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:StyleProperties>
                 <y:Property class="java.awt.Color" name="com.yworks.bpmn.icon.line.color" value="#000000"/>
                 <y:Property class="java.awt.Color" name="com.yworks.bpmn.icon.fill2" value="#d4d4d4cc"/>
@@ -292,19 +289,15 @@ int var</y:AttributeLabel>
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="134.0" width="207.99999999999994" x="283.091135458167" y="-155.32968127490045"/>
+              <y:Geometry height="105.0" width="207.99999999999994" x="283.09113545816706" y="-179.59312749003988"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.14990234375" x="64.42504882812497" xml:space="preserve" y="3.0">ParentClass<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- name : String
-- price : String
-- published : String
-- type : GameType</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">passender Konstruktor
-ggf. Getter/Setter
-
-+ toString() : String</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">- var : String
+- var1 : String
+- var2 : String</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -313,18 +306,16 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="134.0" width="208.0" x="45.091135458167" y="-155.32968127490045"/>
+              <y:Geometry height="117.0" width="208.0" x="45.091135458167" y="-185.59312749003988"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="71.18359375" x="68.408203125" xml:space="preserve" y="3.0">ChildClass<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- games : Game[]</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ Store()
+                <y:AttributeLabel xml:space="preserve">- var : String</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ ChildClass()
 
-+ getGames() : Game[]
-+ addGameToUserWishlist(user : User, gameName : String) : void
-+ addGameToUserLibrary(user : User, gameName : String) : void
-</y:MethodLabel>
++ Method() : int[]
++ Method2(par : boolean) : void</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -336,10 +327,10 @@ ggf. Getter/Setter
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
-              <y:Geometry height="342.99999999999994" width="536.0358565737051" x="-817.5851593625497" y="235.46663346613542"/>
+              <y:Geometry height="343.0" width="536.0358565737051" x="-817.5851593625497" y="27.683764940238973"/>
               <y:Fill color="#FFFFFFE6" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed_dotted" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="4.0" xml:space="preserve" y="-22.70117187500003">Package_2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="4.0" xml:space="preserve" y="-22.701171875">Package_2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:StyleProperties>
                 <y:Property class="java.awt.Color" name="com.yworks.bpmn.icon.line.color" value="#000000"/>
                 <y:Property class="java.awt.Color" name="com.yworks.bpmn.icon.fill2" value="#d4d4d4cc"/>
@@ -380,19 +371,15 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="134.0" width="208.0" x="-504.54930278884456" y="250.46663346613542"/>
+              <y:Geometry height="134.0" width="208.0" x="-504.54930278884456" y="42.68376494023897"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.14990234375" x="64.425048828125" xml:space="preserve" y="3.0">ParentClass<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- name : String
-- price : String
-- published : String
-- type : GameType</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">passender Konstruktor
-ggf. Getter/Setter
-
-+ toString() : String</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">- var1 : String
+- var2 : String
+- var3 : String</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -401,18 +388,15 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="134.0" width="208.0" x="-802.5851593625497" y="250.46663346613542"/>
+              <y:Geometry height="102.0" width="208.0" x="-802.5851593625497" y="42.68376494023897"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.41357421875" x="64.793212890625" xml:space="preserve" y="3.0">ChildClass2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- games : Game[]</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ Store()
+                <y:AttributeLabel xml:space="preserve">- var : String[]</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ ChildClass2()
 
-+ getGames() : Game[]
-+ addGameToUserWishlist(user : User, gameName : String) : void
-+ addGameToUserLibrary(user : User, gameName : String) : void
-</y:MethodLabel>
++ Method() : String[]</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -421,14 +405,13 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="117.0" width="208.0" x="-802.5851593625497" y="429.4666334661353"/>
+              <y:Geometry height="117.0" width="208.0" x="-802.5851593625497" y="221.68376494023886"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.18994140625" x="74.905029296875" xml:space="preserve" y="26.701171875">Interface<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">&lt;html&gt;+ &lt;u&gt;CAPACITY = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ getWishlist() : Game[]
-+ addToWishlist(game : Game) : void</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">&lt;html&gt;- &lt;u&gt;constVar = 1 : int&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : String[]</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -437,18 +420,16 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="117.0" width="208.0" x="-504.54930278884456" y="429.4666334661354"/>
+              <y:Geometry height="117.0" width="208.0" x="-504.54930278884456" y="221.68376494023897"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.41357421875" x="64.793212890625" xml:space="preserve" y="3.0">ChildClass1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
                 <y:AttributeLabel xml:space="preserve">- games : Game[]</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ Store()
+                <y:MethodLabel xml:space="preserve">+ ChildClass()
 
-+ getGames() : Game[]
-+ addGameToUserWishlist(user : User, gameName : String) : void
-+ addGameToUserLibrary(user : User, gameName : String) : void
-</y:MethodLabel>
++ Method() : String
++ Method1() : Double</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -460,7 +441,7 @@ ggf. Getter/Setter
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
-              <y:Geometry height="194.0" width="729.0" x="30.091135458167003" y="42.68376494023897"/>
+              <y:Geometry height="139.5" width="729.0" x="30.091135458167003" y="-19.843127490039876"/>
               <y:Fill color="#FFFFFFE6" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed_dotted" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.046875" x="4.0" xml:space="preserve" y="-22.701171875">Package_5<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -472,7 +453,7 @@ ggf. Getter/Setter
               </y:StyleProperties>
               <y:State autoResize="true" closed="false" closedHeight="80.0" closedWidth="100.0"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="15" rightF="15.0" top="0" topF="0.0"/>
             </y:GenericGroupNode>
             <y:GenericGroupNode configuration="com.yworks.bpmn.Artifact.withShadow">
               <y:Geometry height="55.0" width="85.0" x="-111.5" y="-59.5"/>
@@ -504,19 +485,14 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="164.0" width="156.0" x="322.91429035787024" y="57.68376494023897"/>
+              <y:Geometry height="87.0" width="156.0" x="309.09113545816706" y="10.156872509960124"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.68994140625" x="58.655029296875" xml:space="preserve" y="3.0">Class<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">- name : String
-- price : String
-- published : String
-- type : GameType</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">passender Konstruktor
-ggf. Getter/Setter
-
-+ toString() : String</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">- var : String
+- var2 : String</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method() : String</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -525,14 +501,13 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="117.0" width="208.0" x="536.091135458167" y="81.18376494023897"/>
+              <y:Geometry height="102.0" width="208.0" x="521.0911354581671" y="2.656872509960124"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="72.64990234375" x="67.675048828125" xml:space="preserve" y="26.701171875">Interface_2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">&lt;html&gt;+ &lt;u&gt;CAPACITY = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ getWishlist() : Game[]
-+ addToWishlist(game : Game) : void</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">&lt;html&gt;- &lt;u&gt;constVar2 = 2 : int&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method2() : int</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -541,14 +516,13 @@ ggf. Getter/Setter
           <data key="d4" xml:space="preserve"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="117.0" width="208.0" x="45.091135458167" y="81.18376494023897"/>
+              <y:Geometry height="102.0" width="208.0" x="45.091135458167" y="-4.843127490039876"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="72.64990234375" x="67.675048828125" xml:space="preserve" y="26.701171875">Interface_1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve">&lt;html&gt;+ &lt;u&gt;CAPACITY = 2 : intt&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
-                <y:MethodLabel xml:space="preserve">+ getWishlist() : Game[]
-+ addToWishlist(game : Game) : void</y:MethodLabel>
+                <y:AttributeLabel xml:space="preserve">&lt;html&gt;- &lt;u&gt;constVar1 = 2 : int&lt;/u&gt;&lt;/html&gt;</y:AttributeLabel>
+                <y:MethodLabel xml:space="preserve">+ Method1() : Double[]</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -667,7 +641,9 @@ ggf. Getter/Setter
     <edge id="n0::e0" source="n0::n0" target="n0::n1">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-60.0" ty="24.166666666666686"/>
+          <y:Path sx="0.0" sy="0.0" tx="-60.0" ty="24.166666666666686">
+            <y:Point x="503.78525381169163" y="-330.74905985542136"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
