@@ -28,7 +28,7 @@ public class TestData {
                         new Variable(true, null, "String", "stringPar",null),
                         new Variable(true, null, "int", "intPar",null)
                 }, "Class1Method")
-        ), "testPack2");
+        ), "testPack2.test");
 
         File aEnum = new File(FileType.Enum, "anEnum", null, Arrays.asList(), Arrays.asList(
                 new Variable(null, null, "Enum", "FIRST", null),

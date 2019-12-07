@@ -23,8 +23,11 @@ public class Variable extends Attributes {
         if (value.isEmpty()) {
             return str.toString() + returntype + " " + name + ";";
         } else
+            if(returntype.equals("String")){
+                return str.toString() + returntype + " " + name + " = " + "\"" +value + "\"" + ";";
+            }
             return str.toString() + returntype + " " + name + " = " + value + ";";
-    }
+        }
 
     public String toStringEnum(){
         return name;

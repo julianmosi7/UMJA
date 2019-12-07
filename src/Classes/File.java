@@ -29,7 +29,7 @@ public class File {
             if(parent != null){
                 str.append(" extends " + parent.name);
             }
-            if(implement != null){
+            if(implement.size()!=0){
                 str.append(" implements ");
                 for (File files:
                      implement) {
