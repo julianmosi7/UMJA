@@ -76,7 +76,7 @@ public class ParserHandler extends DefaultHandler {
                     ret.add(node.prepare().clean());
                 }
             }catch (Exception e){
-                System.out.println();
+                e.printStackTrace();
             }
         }
         return ret;

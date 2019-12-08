@@ -107,7 +107,7 @@ public class PrepareCompile {
         boolean isPublic = var.contains("+");
         String methodDataType = null;
         for (int i = 0; i < parts.length; i++) {
-            if(parts[i].contains(":")){
+            if(var.replace(bracket,"").contains(":")){
                 methodDataType = parts[parts.length - 1];
                 methodDataType = methodDataType.replace("\n", "");
             }
