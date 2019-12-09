@@ -8,7 +8,6 @@ public class ChildClass2 extends ParentClass{
     }
 
     public int[] Method_1(){
-
     }
 
     public void Method_2(String par){
